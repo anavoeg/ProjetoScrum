@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
+*/
+Route::get('/','PagesController@home');
+
+Route::get('/faleconosco', 'PagesController@faleconosco');
+
+Route::get('/feminino', 'PagesController@feminino');
+
+Route::get('/masculino', 'PagesController@masculino');
