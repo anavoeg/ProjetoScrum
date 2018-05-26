@@ -22,3 +22,11 @@ Route::get('/faleconosco', 'PagesController@faleconosco');
 Route::get('/feminino', 'PagesController@feminino');
 
 Route::get('/masculino', 'PagesController@masculino');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
