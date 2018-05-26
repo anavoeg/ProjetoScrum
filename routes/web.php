@@ -19,6 +19,8 @@ Route::get('/','PagesController@home');
 
 Route::get('/faleconosco', 'PagesController@faleconosco');
 
+Route::get('/form_usuario', 'PagesController@form_usuario');
+
 Route::get('/feminino', 'PagesController@feminino');
 
 Route::get('/masculino', 'PagesController@masculino');

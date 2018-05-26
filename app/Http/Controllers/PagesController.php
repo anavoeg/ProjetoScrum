@@ -8,12 +8,12 @@ class PagesController extends Controller
 {
     
     public function home(){
-        return view ('pages.home');
+        return view ('home');
     }
     public function faleconosco(){
-        return view ('pages.faleconosco');
+        return view ('faleconosco');
     }
-    public function index(){
-        return view ('pages.home');
+    public function form_usuario(){
+        return view ('form_usuario');
     }
 }
