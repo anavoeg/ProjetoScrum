@@ -1,10 +1,14 @@
 /* Font Awesome */ 
-@import "node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/font-awesome/css/font-awesome.css";
 
 body{
     background: linear-gradient( rgba(255, 187, 0, 0.623), rgb(255, 187, 0));
     font-family: 'Quicksand', sans-serif;
 }
+span.page-cia, p.page-text{
+    color: rgb(117, 84, 0);
+}
+
 .full-content{
     /*background-color: rgba(0, 119, 255, 0.486);*/
     background-color: rgba(0, 119, 255, 0.590);
@@ -131,7 +135,7 @@ input[type=search].form-search  {
   }
    h5, h6 {
     font-family: 'Quicksand', sans-serif;
-    color: rgb(85, 0, 0);
+    color: red;
     font-weight: 600;
   }
   
@@ -170,56 +174,35 @@ input[type=search].form-search  {
   
   .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
   
-/*FORMULÁRIOS:
-
-        LOGIN
-*/
-.line-break {
-    display: inline-block;
-    position: relative;
-    width: 1px;
-    height: 295px;
-    min-height: 285px;
-    /* margin: 0 7.65vw; */
-    border-left: 1px solid #c5c5c5;
-    text-align: center;
-}
-
-
-
-
-/*      CADASTRO*/
-.client-form{
-    margin-top: 2em;
-}
+/*  FORMULÁRIOS: */
 label{
     margin-bottom: 0;
     padding: 0;
 
-}
-input[type=text], input[type=password], input[type=email]{
-    padding-top: 0;
-}
-.client-form .form-control{
-    border-radius: 0;
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-    background-color: transparent;
 }
 .form-control:focus{
     box-shadow: none; 
     -webkit-box-shadow: none;
     animation: full-border .50s ease-in-out forwards;
 } 
-@keyframes aside{
-    /* 0%{width: 60%; border-color: #ced4da} */
-    100%{margin-right: 0.4em;}
+
+/*      LOGIN      */
+span.signup-warn{
+    text-decoration-line: underline;
+    color: black;
+    font-size: 0.8em;
+    padding-left: 14em;
+}
+span.signup-warn:hover{
+    color: white;
 }
 
-@keyframes full-border{
-    0%{width: 60%; border-color: #ced4da}
-    100%{width: 100%; border-color: rgb(75, 0, 0);}
+/*      CADASTRO*/
+.client-form, .client-login {
+    margin-top: 2em;
+}
+input[type=text], input[type=password], input[type=email]{
+    padding-top: 0;
 }
 .client-form h4{
     text-align: center;
@@ -229,10 +212,25 @@ input[type=text], input[type=password], input[type=email]{
     margin-bottom: 3em;
 
 }
-span.page-cia, p.page-text{
-    color: rgb(117, 84, 0);
+.client-form .form-control, .client-login .form-control{
+    border-radius: 0;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    background-color: transparent;
+}
+@keyframes aside{
+    /* 0%{width: 60%; border-color: #ced4da} */
+    100%{margin-right: 0.4em;}
+}
+
+@keyframes full-border{
+    0%{width: 60%; border-color: #ced4da}
+    100%{width: 100%; border-color: rgb(75, 0, 0);}
 }
 .btn-cad{
+    width:50%;
+    margin-left: 7.5em;
     background-color: rgba(117, 84, 0, 0.39);
 }
 .btn-cad:hover{

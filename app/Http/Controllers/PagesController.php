@@ -22,6 +22,9 @@ class PagesController extends Controller
     public function calcados(){
         return view ('calcados');
     }
+    public function outlet(){
+        return view ('outlet');
+    }
     public function login(){
         return view ('login');
     }

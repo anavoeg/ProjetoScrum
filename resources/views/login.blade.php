@@ -2,10 +2,11 @@
 
 @section('content')
 
-<div class="container client-form d-flex justify-content-center">
+<div class="container client-login d-flex justify-content-center">
     <div class="col-md-8 order-md-1 ">
-        <h4 class="mb-3">Oi!</span></h4>
-        <p class="page-text">Digite seu email e senha para acessar uma nova experiência.</p>
+        <!--<hr class="mb-4">-->
+        <p class="page-text login-text">Digite seu email e senha para acessar uma nova experiência.</p>
+        <hr class="mb-4">
             <form enctype="multipart/form-data" class="needs-validation" novalidate>
                 <div class="mb-3">
                     <label for="email">email</label>
@@ -22,7 +23,7 @@
                         senha inválida.
                     </div>
                 </div> 
-                 <a class="page-text" href="/cadastro"><span>Ainda não possui uma conta? Mude isso agora.</span></a>
+                 <a class="" href="{{route('cadastro')}}"><span class="signup-warn">Ainda não possui uma conta? Mude isso agora.</span></a>
                 <button class="btn btn-lg btn-block btn-cad" type="submit">ENTRAR</button>
             </form>
     </div>

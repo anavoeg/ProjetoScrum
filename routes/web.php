@@ -17,31 +17,33 @@
 */
 
 //navbar header
-Route::get('/','PagesController@home');
+Route::get('/','PagesController@home')->name("home");
 
-Route::get('/feminino', 'PagesController@feminino');
+Route::get('/feminino', 'PagesController@feminino')->name("feminino");
 
-Route::get('/masculino', 'PagesController@masculino');
+Route::get('/masculino', 'PagesController@masculino')->name("masculino");
 
-Route::get('/infantil', 'PagesController@infantil');
+Route::get('/infantil', 'PagesController@infantil')->name("infantil");
 
-Route::get('/calcados', 'PagesController@calcados');
+Route::get('/calcados', 'PagesController@calcados')->name("calcados");
 
-Route::get('/login', 'PagesController@login');
+Route::get('/outlet', 'PagesController@oulet')->name("outlet");
 
-Route::get('/cadastro', 'PagesController@cadastro');
+Route::get('/login', 'PagesController@login')->name("login");
 
-Route::get('/downtown', 'PagesController@downtown');
+Route::get('/cadastro', 'PagesController@cadastro')->name("cadastro");
+
+Route::get('/downtown', 'PagesController@downtown')->name("downtown");
 
 //navbar footer
 //-------institucional------------
-Route::get('/identidade', 'PagesController@identidade');
+Route::get('/identidade', 'PagesController@identidade')->name("identidade");
 
 //-----------atendimento----------
-Route::get('/faleconosco', 'PagesController@faleconosco');
+Route::get('/faleconosco', 'PagesController@faleconosco')->name("faleconosco");
 
 //----------projetos sociais-----------
-Route::get('/social', 'PagesController@social');
+Route::get('/social', 'PagesController@social')->name("social");
 
 //----------troco likes--------------------
 
