@@ -32,12 +32,10 @@ class CreateBuysTable extends Migration
      */
     public function down()
     {
-        Schema::table('buys', function($table)
-        {
+        Schema::table('buys', function ($table) {
             $table->dropForeign(['id_user']);
             $table->dropForeign(['id_product']);
         });
         Schema::dropIfExists('buys');
-
     }
 }

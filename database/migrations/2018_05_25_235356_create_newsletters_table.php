@@ -22,6 +22,7 @@ class CreateNewslettersTable extends Migration
             $table->timestamps();
             $table->foreign('notice_id')
             ->references('id')->on('notices');
+
         });
     }
 
