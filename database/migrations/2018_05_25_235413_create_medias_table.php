@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNewsletterTable extends Migration
+class CreateMediasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateNewsletterTable extends Migration
      */
     public function up()
     {
-        Schema::create('newsletter', function (Blueprint $table) {
+        Schema::create('medias', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('path');
+            $table->unsignedInteger('product_id');
             $table->timestamps();
+            $table->foreign('product_id')
+            ->references('id')->on('products');
         });
     }
 
@@ -26,6 +30,10 @@ class CreateNewsletterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('newsletter');
+        Schema::table('medias', function($table)
+        {
+            $table->dropForeign(['product_id']);
+        });
+        Schema::dropIfExists('medias');
     }
 }

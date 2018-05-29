@@ -1,3 +1,243 @@
+/* Font Awesome */ 
+@import "node_modules/font-awesome/css/font-awesome.css";
+
 body{
-    background: #FFD700;
+    background: linear-gradient( rgba(255, 187, 0, 0.623), rgb(255, 187, 0));
+    font-family: 'Quicksand', sans-serif;
+}
+span.page-cia, p.page-text{
+    color: rgb(117, 84, 0);
+}
+
+.full-content{
+    /*background-color: rgba(0, 119, 255, 0.486);*/
+    background-color: rgba(0, 119, 255, 0.590);
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    opacity: 0.89;
+
+}
+.nav-main{
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0;
+    vertical-align: 0;
+    content: "";
+    border: 0;
+}
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.top{
+    background-color: rgba(0, 255, 179, 0.253); 
+    border-radius: .25rem;
+    margin-left: 0.001em;
+}
+input[type=search].form-search  {
+	background:  url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 7px center;
+	padding: 0.3em;
+	width: 55px;
+	
+	/* -webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em; */
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+ input[type=search].form-search {
+	width: 40px;
+	padding-left: 10px;
+	color: transparent;
+    cursor: pointer;
+}
+ input[type=search]:hover.form-search {
+	background-color: #6c757d;
+}
+ input[type=search]:focus.form-search {
+	width: 130px;
+	padding-left: 0.3em;
+	color: #000;
+	background-color: rgba(255, 255, 255, 0.425);
+    cursor: auto;
+    box-shadow: none;
+    animation: aside .50s ease-in-out forwards;
+
+}
+ input:-moz-placeholder.form-search {
+	color: transparent;
+}
+ input::-webkit-input-placeholder.form-search {
+	color: transparent;
+}
+/* stylelint-disable selector-list-comma-newline-after */
+
+.site-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .site-header-logo {
+    font-family: 'Quicksand', sans-serif;
+    color: darkgoldenrod;
+    font-weight:600; 
+  }
+  
+  .site-header-logo:hover {
+    text-decoration: none;
+    color: darkgoldenrod;
+  }
+
+  .btn-outline-secondary{
+      font-weight: 700;
+      color: wheat;
+  }
+  .page-cia{
+    font-family: 'Quicksand', sans-serif;
+  }
+  .page-text, .page-cia{
+    color: rgb(85, 0, 0);
+    font-weight: 600;
+    text-transform:uppercase;
+
+  }
+  
+  a.page-text:hover, a.page-cia:hover{
+      color: #e5e5e5;
+      text-decoration: none;
+  }
+
+  h1, h2, h3, h4{
+    font-family: 'Poppins', sans-serif;
+  
+  }
+   h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+    color: red;
+    font-weight: 600;
+  }
+  
+  h5:hover{
+    color: rgb(0, 43, 30);
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+    
+  }
+  
+  .nav-scroller .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .flex-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+    
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+  
+/*  FORMULÁRIOS: */
+label{
+    margin-bottom: 0;
+    padding: 0;
+
+}
+.form-control:focus{
+    box-shadow: none; 
+    -webkit-box-shadow: none;
+    animation: full-border .50s ease-in-out forwards;
+} 
+
+/*      LOGIN      */
+span.signup-warn{
+    text-decoration-line: underline;
+    color: black;
+    font-size: 0.8em;
+    padding-left: 14em;
+}
+span.signup-warn:hover{
+    color: white;
+}
+
+/*      CADASTRO*/
+.client-form, .client-login {
+    margin-top: 2em;
+}
+input[type=text], input[type=password], input[type=email]{
+    padding-top: 0;
+}
+.client-form h4{
+    text-align: center;
+}
+.client-form p{
+    text-align: left;
+    margin-bottom: 3em;
+
+}
+.client-form .form-control, .client-login .form-control{
+    border-radius: 0;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    background-color: transparent;
+}
+@keyframes aside{
+    /* 0%{width: 60%; border-color: #ced4da} */
+    100%{margin-right: 0.4em;}
+}
+
+@keyframes full-border{
+    0%{width: 60%; border-color: #ced4da}
+    100%{width: 100%; border-color: rgb(75, 0, 0);}
+}
+.btn-cad{
+    width:50%;
+    margin-left: 7.5em;
+    background-color: rgba(117, 84, 0, 0.39);
+}
+.btn-cad:hover{
+    background-color: rgb(117, 84, 0);    
+}
+button.btn.btn-back{
+    background-color: #9dffd970;
+    margin-right: 3em;
+    padding: .275rem .55rem;
 }

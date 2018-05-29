@@ -1,68 +1,29 @@
-<<<<<<< HEAD
-@extends('layouts.app')
-=======
 @extends('layouts.base')
->>>>>>> 4db81d8d2d6fae61ce4aa16a21312f941b4c5958
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+  <div class="col-md-6 px-0">
+    <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+    <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+    <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+  </div>
+</div>
 
-<<<<<<< HEAD
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+<div class="row mb-2">
+  <div class="col-md-6">
+    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+      <div class="card-body d-flex flex-column align-items-start">
+        <strong class="d-inline-block mb-2 text-primary">World</strong>
+        <h3 class="mb-0">
+          <a class="text-dark" href="#">Featured post</a>
+        </h3>
+        <div class="mb-1 text-muted">Nov 12</div>
+        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+        <a href="#">Continue reading</a>
+      </div>
+      <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
     </div>
+  </div>
+</div>
 </div>
 @endsection
-=======
-    	<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-      </div>
-      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-      </div>
-    </div>
-
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-      </div>
-      <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-      </div>
-    </div>
-</div>
-</div>
-
-
-@endsection
->>>>>>> 4db81d8d2d6fae61ce4aa16a21312f941b4c5958
