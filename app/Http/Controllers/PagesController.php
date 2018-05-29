@@ -25,12 +25,12 @@ class PagesController extends Controller
     public function outlet(){
         return view ('outlet');
     }
-    public function login(){
-        return view ('login');
-    }
-    public function cadastro(){
-        return view ('cadastro');
-    }
+//    public function login(){
+//        return view ('login');
+//    }
+//    public function cadastro(){
+//
+//    }
     public function downtown(){
         return view ('downtown');
     }

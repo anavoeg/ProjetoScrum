@@ -29,9 +29,7 @@ Route::get('/calcados', 'PagesController@calcados')->name("calcados");
 
 Route::get('/outlet', 'PagesController@oulet')->name("outlet");
 
-Route::get('/login', 'PagesController@login')->name("login");
 
-Route::get('/cadastro', 'PagesController@cadastro')->name("cadastro");
 
 Route::get('/downtown', 'PagesController@downtown')->name("downtown");
 
@@ -49,4 +47,29 @@ Route::get('/social', 'PagesController@social')->name("social");
 
 
 Route::get('/test', 'PagesController@test');
+
+//===========================================================================
+
+//Rotas relacionadas ao usuário.
+
+//mostra o form login.
+Route::get('/login', 'UserController@index')->name("login");
+
+
+//usuario - login (verificar se dados recebidos corretamente).
+    Route::post('/executar_login', 'UserController@executarLoginUsuarios');
+
+//formulario de cadastro de usuario
+Route::get('/cadastro', 'UserController@cadastro')->name("cadastro");
+
+//verificar se dados recebidos corretamente
+Route::post('/executar_cadastro', 'UserController@executarCadastroUsuarios');
+
+//formulario para recuperação de senha
+Route::get('/recuperar', 'UserController@recuperar')->name("recuperar");
+
+//verificar se dados recebidos corretamente
+Route::post('/executar_recuperar', 'UserController@executarRecuperarSenha');
+
+
 
