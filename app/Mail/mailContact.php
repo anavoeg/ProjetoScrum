@@ -10,15 +10,17 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class mailContact extends Mailable
 {
     use Queueable, SerializesModels;
+    public $dados;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($dados)
     {
         //
+        $this->dados = $dados;
     }
 
     /**
@@ -28,6 +30,8 @@ class mailContact extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->from($this->dados->email, $this->dados->name)
+            ->subject("Contato da loja")
+            ->view('email.email');
     }
 }

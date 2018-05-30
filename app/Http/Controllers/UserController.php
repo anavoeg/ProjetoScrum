@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\classes\GeradorSenha;
+use App\Mail\mailContact;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
@@ -73,8 +75,10 @@ class UserController extends Controller
         Session::put('logado', 'sim');
         Session::put('id_usuario', $usuario->id);
         Session::put('usuario', $usuario->first_name);
-        return redirect('/');//podemos regressar para raiz da nossa aplicação por que na raiz a gente verifica se existe uma sessao, se existe ele redireciona para aplicação
 
+        //        return redirect('/');//podemos regressar para raiz da nossa aplicação por que na raiz a gente verifica se existe uma sessao, se existe ele redireciona para aplicação
+        $sucesso_bd = ["Login efetuado com sucesso!"];
+        return view('login', compact('sucesso_bd'));
 
     }
 
@@ -87,8 +91,8 @@ class UserController extends Controller
 
         //validações
         $this->validate($request, [
-            'first_name' => 'bail|required|between:3,30|alpha',
-            'last_name' => 'bail|required|between:3,30|alpha',
+            'first_name' => 'bail|required|between:3,30',
+            'last_name' => 'bail|required|between:3,30',
             'address' => 'bail|required|min:5|max:70',
             'cpf' => 'bail|required|min:14|max:14|unique:users',
             'password' => 'bail|required|between:6,15',
@@ -107,7 +111,9 @@ class UserController extends Controller
         $novo->password = Hash::make($request->password);
         $novo->email = $request->email;
         $novo->save();
-        return redirect('/');
+//        return redirect('/');
+        $sucesso_bd = ["Cadastrado com sucesso!"];
+        return view('cadastro', compact('sucesso_bd'));
     }
 
     //================================================================
@@ -166,6 +172,15 @@ class UserController extends Controller
         //logout da sessao (destruir a sessao e redirecionar para o form de login)
         //destruir a sessao
         Session::flush();
+        return redirect('/');
+    }
+    public function contactForm(){
+        return view('faleconosco');
+    }
+    public function sendMail(Request $request){
+        //enviar email
+
+        Mail::to('servidor@hotmail.com')->send(new mailContact($request));
         return redirect('/');
     }
 }

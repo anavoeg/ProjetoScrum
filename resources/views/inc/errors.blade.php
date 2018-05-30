@@ -33,3 +33,10 @@
         @endforeach
     </div>
 @endif
+@if(isset($sucesso_bd))
+    <div class="alert alert-info">
+        @foreach($sucesso_bd as $sucesso)
+            <p>{{ $sucesso }}</p>
+        @endforeach
+    </div>
+@endif

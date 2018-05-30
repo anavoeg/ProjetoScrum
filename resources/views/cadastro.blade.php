@@ -71,6 +71,6 @@
           </form>
         </div>
     </div>
-    <button class="btn btn-back" type="submit" onclick="history.go(-1)"><i class="fas fa-undo"></i> Voltar</button>
+    <button class="btn btn-back" type="submit" onclick="window.location = '/'"><i class="fas fa-undo"></i> Voltar</button>
 
 @endsection

@@ -71,8 +71,11 @@ Route::get('/recuperar', 'UserController@recuperar')->name("recuperar");
 //verificar se dados recebidos corretamente
 Route::post('/executar_recuperar', 'UserController@executarRecuperarSenha');
 
+//formulario de contato
+Route::get('/email', 'UserController@contactForm');
+
 //envio de email
-Route::post('/email', 'UserController@sendEmail');
+Route::post('/send', 'UserController@sendMail')->name("sendMail");
 
 
 
