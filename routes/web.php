@@ -71,5 +71,9 @@ Route::get('/recuperar', 'UserController@recuperar')->name("recuperar");
 //verificar se dados recebidos corretamente
 Route::post('/executar_recuperar', 'UserController@executarRecuperarSenha');
 
+//envio de email
+Route::post('/email', 'UserController@sendEmail');
+
+
 
 
