@@ -17,7 +17,7 @@
 */
 
 //navbar header
-Route::get('/','PagesController@home')->name("home");
+Route::any('/','PagesController@home')->name("home");
 
 Route::get('/feminino', 'PagesController@feminino')->name("feminino");
 
@@ -27,7 +27,7 @@ Route::get('/infantil', 'PagesController@infantil')->name("infantil");
 
 Route::get('/calcados', 'PagesController@calcados')->name("calcados");
 
-Route::get('/outlet', 'PagesController@oulet')->name("outlet");
+Route::get('/outlet', 'PagesController@outlet')->name("outlet");
 
 
 
@@ -38,7 +38,7 @@ Route::get('/downtown', 'PagesController@downtown')->name("downtown");
 Route::get('/identidade', 'PagesController@identidade')->name("identidade");
 
 //-----------atendimento----------
-Route::get('/faleconosco', 'PagesController@faleconosco')->name("faleconosco");
+// Route::get('/faleconosco', 'PagesController@faleconosco')->name("faleconosco");
 
 //----------projetos sociais-----------
 Route::get('/social', 'PagesController@social')->name("social");
@@ -72,10 +72,16 @@ Route::get('/recuperar', 'UserController@recuperar')->name("recuperar");
 Route::post('/executar_recuperar', 'UserController@executarRecuperarSenha');
 
 //formulario de contato
-Route::get('/email', 'UserController@contactForm');
+Route::get('/faleconosco', 'UserController@contactForm')->name('faleconosco');
 
 //envio de email
-Route::post('/send', 'UserController@sendMail')->name("sendMail");
+Route::post('/send_email', 'UserController@sendMail')->name("sendMail");
+
+//Cadastro de NewsLetter
+Route::post('/newsletter', 'UserController@newsletter')->name('newsletter');
+
+//Logout do usuario
+Route::get('/logout', 'UserController@logout')->name('logout');
 
 
 

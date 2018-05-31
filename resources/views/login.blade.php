@@ -10,7 +10,7 @@
         {{--Erros (validação)--}}
         @include('inc.errors')
 
-            <form enctype="multipart/form-data" method="POST" action="/executar_login" class="needs-validation" novalidate>
+            <form enctype="multipart/form-data" method="POST" action="/executar_login">
                 {{ csrf_field() }}
                 <div class="mb-3">
                     <label for="email">email</label>

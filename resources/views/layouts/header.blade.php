@@ -21,7 +21,7 @@
 <div class="nav-main py-1 mb-2">
   <nav class="nav d-flex justify-content-between">
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle p-2 page-text" data-toggle="dropdown" href="{{route('feminino')}}" role="button" aria-haspopup="true" aria-expanded="false">Feminino</a>
+      <a class="nav-link dropdown-toggle p-2 page-text"  href="{{route('feminino')}}" role="button" aria-haspopup="true" aria-expanded="false">Feminino</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
@@ -31,7 +31,7 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle p-2 page-text" data-toggle="dropdown" href="{{route('masculino')}}" role="button" aria-haspopup="true" aria-expanded="false">Masculino</a>
+          <a class="nav-link dropdown-toggle p-2 page-text" href="{{route('masculino')}}" role="button" aria-haspopup="true" aria-expanded="false">Masculino</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
@@ -41,7 +41,7 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle p-2 page-text" data-toggle="dropdown" href="{{route('infantil')}}" role="button" aria-haspopup="true" aria-expanded="false">Infantil</a>
+            <a class="nav-link dropdown-toggle p-2 page-text" href="{{route('infantil')}}" role="button" aria-haspopup="true" aria-expanded="false">Infantil</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">Action</a>
               <a class="dropdown-item" href="#">Another action</a>
@@ -51,7 +51,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle p-2 page-text" data-toggle="dropdown" href="{{route('calcados')}}" role="button" aria-haspopup="true" aria-expanded="false">CALÇADOS</a>
+              <a class="nav-link dropdown-toggle p-2 page-text" href="{{route('calcados')}}" role="button" aria-haspopup="true" aria-expanded="false">CALÇADOS</a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
@@ -61,7 +61,7 @@
               </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2 page-text" data-toggle="dropdown" href="{{route('outlet')}}" role="button" aria-haspopup="true" aria-expanded="false">OUTLET</a>
+                <a class="nav-link dropdown-toggle p-2 page-text" href="{{route('outlet')}}" role="button" aria-haspopup="true" aria-expanded="false">OUTLET</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="#">Another action</a>
@@ -71,7 +71,7 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle p-2 page-text" data-toggle="dropdown" href="{{route('faleconosco')}}" role="button" aria-haspopup="true" aria-expanded="false">CARNAVALIA&VOCÊ</a>
+                  <a class="nav-link dropdown-toggle p-2 page-text" href="{{route('faleconosco')}}" >CARNAVALIA&VOCÊ</a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>

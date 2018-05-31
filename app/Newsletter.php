@@ -10,7 +10,7 @@ class Newsletter extends Model
     protected $fillable = [
         'nome',
         'email',
-        'type',
-        'notice_id'
+        'sexo',
+        
     ];
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\classes\GeradorSenha;
 use App\Mail\mailContact;
 use App\User;
+use App\Newsletter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -30,7 +31,7 @@ class UserController extends Controller
             //se não existe, apresenta formulario de login
             return $this->frmLogin();
         } else {
-            return view('home'); //usuario logado
+            return redirect('/'); //usuario logado
         }
 
 
@@ -179,8 +180,19 @@ class UserController extends Controller
     }
     public function sendMail(Request $request){
         //enviar email
-
         Mail::to('servidor@hotmail.com')->send(new mailContact($request));
+        return redirect('/');
+    }
+
+
+    public function newsletter(Request $request){
+    
+        $news = new Newsletter();
+        $news->nome = $request->first_name;
+        $news->email = $request->email;
+        $news->sexo = $request->sexo;
+        $news->save();
+
         return redirect('/');
     }
 }

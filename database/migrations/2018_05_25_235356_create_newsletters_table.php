@@ -17,12 +17,8 @@ class CreateNewslettersTable extends Migration
             $table->increments('id');
             $table->string('nome')->nullable();
             $table->string('email');
-            $table->tinyInteger('type');
-            $table->unsignedInteger('notice_id');
-            $table->timestamps();
-            $table->foreign('notice_id')
-            ->references('id')->on('notices');
-
+            $table->tinyInteger('sexo');
+            
         });
     }
 
@@ -33,10 +29,7 @@ class CreateNewslettersTable extends Migration
      */
     public function down()
     {
-        Schema::table('newsletters', function($table)
-        {
-            $table->dropForeign(['notice_id']);
-        });
+        
         Schema::dropIfExists('newsletters');
 
     }

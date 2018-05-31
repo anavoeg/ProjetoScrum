@@ -23,7 +23,7 @@ class PagesController extends Controller
         return view ('calcados');
     }
     public function outlet(){
-        return view ('outlet');
+        return view ('home');
     }
 //    public function login(){
 //        return view ('login');
@@ -39,9 +39,9 @@ class PagesController extends Controller
     public function identidade(){
         return view ('identidade');
     }
-    public function faleconosco(){
-        return view ('faleconosco');
-    }
+    // public function faleconosco(){
+    //     return view ('faleconosco');
+    // }
     public function social(){
         return view ('social');
     }
